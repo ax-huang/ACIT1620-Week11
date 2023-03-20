@@ -13,8 +13,18 @@
 // greet('andrew');
 
 //-----Arrow Function-----
-let greet = user =>{
-    console.log(`Hello ${user}`)
+// let greet = user =>{
+//     console.log(`Hello ${user}`)
+// }
+
+// greet('andrew')
+
+//-----Function Declaration with Two Args and Deafualt Value-----
+function greet(name, time = 'day'){
+    console.log(`good ${time} ${name}`);
 }
 
-greet('andrew')
+//Arrow Fucntion
+// let greet = (user, time = 'day') => console.log(`Good ${time} ${user}`)
+
+greet('andrew');
