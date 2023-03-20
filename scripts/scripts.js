@@ -30,20 +30,36 @@
 // greet('andrew');
 
 //-----Calc Area of Cicrcle Function w/ Return Statement-----
-let radius 
-const radiusPara = document.querySelector("#radius")
-const resultPara = document.querySelector("#result")
+// let radius 
+// const radiusPara = document.querySelector("#radius")
+// const resultPara = document.querySelector("#result")
 
-console.log(radiusPara)
+// console.log(radiusPara)
 
-do{
-    radius = Number(prompt("Enter a radius"));
+// do{
+//     radius = Number(prompt("Enter a radius"));
+// }
+// while(isNaN(radius))
+
+// let calcArea = radius => (Math.pow(radius,2) * Math.PI).toFixed(2);
+
+// radiusPara.textContent += ` : ${radius}`
+// resultPara.textContent += ` : ${calcArea(radius)}`
+
+// // alert(`The area of a circle with radius ${radius} is ${calcArea(radius)}`);
+
+//-----Add DOM Elements-----
+function populateList(myShoppingList){
+    const listElement = document.querySelector("ul.shopping")
+
+    for(let item of myShoppingList){
+        const li = document.createElement("li")
+        li.textContent = item
+
+        listElement.appendChild(li)
+    }
+
 }
-while(isNaN(radius))
 
-let calcArea = radius => (Math.pow(radius,2) * Math.PI).toFixed(2);
-
-radiusPara.textContent += ` : ${radius}`
-resultPara.textContent += ` : ${calcArea(radius)}`
-
-// alert(`The area of a circle with radius ${radius} is ${calcArea(radius)}`);
+let shoppingList = ['bread','cheese', 'green pepper']
+populateList(shoppingList)
