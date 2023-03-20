@@ -49,16 +49,39 @@
 // // alert(`The area of a circle with radius ${radius} is ${calcArea(radius)}`);
 
 //-----Add DOM Elements-----
+// function populateList(myShoppingList){
+//     const listElement = document.querySelector("ul.shopping")
+
+//     for(let item of myShoppingList){
+//         const li = document.createElement("li")
+//         li.textContent = item
+
+//         listElement.appendChild(li)
+//     }
+
+// }
+
+// let shoppingList = ['bread','cheese', 'green pepper']
+// populateList(shoppingList)
+
+//-----Acess and Change Class-----
+
 function populateList(myShoppingList){
     const listElement = document.querySelector("ul.shopping")
 
     for(let item of myShoppingList){
         const li = document.createElement("li")
         li.textContent = item
-
         listElement.appendChild(li)
     }
+    squareList()
+}
 
+function squareList(){
+
+    const listElement = document.querySelector("ul.shopping")
+    listElement.classList.remove("circleList")
+    listElement.classList.add("squareList")
 }
 
 let shoppingList = ['bread','cheese', 'green pepper']
