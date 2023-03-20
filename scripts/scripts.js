@@ -31,6 +31,10 @@
 
 //-----Calc Area of Cicrcle Function w/ Return Statement-----
 let radius 
+const radiusPara = document.querySelector("#radius")
+const resultPara = document.querySelector("#result")
+
+console.log(radiusPara)
 
 do{
     radius = Number(prompt("Enter a radius"));
@@ -39,4 +43,7 @@ while(isNaN(radius))
 
 let calcArea = radius => (Math.pow(radius,2) * Math.PI).toFixed(2);
 
-alert(`The area of a circle with radius ${radius} is ${calcArea(radius)}`);
+radiusPara.textContent += ` : ${radius}`
+resultPara.textContent += ` : ${calcArea(radius)}`
+
+// alert(`The area of a circle with radius ${radius} is ${calcArea(radius)}`);
