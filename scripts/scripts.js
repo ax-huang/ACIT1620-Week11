@@ -86,3 +86,27 @@ function squareList(){
 
 let shoppingList = ['bread','cheese', 'green pepper']
 populateList(shoppingList)
+
+function updateImage(){
+    const image = document.querySelector("#shoppingCart")
+    image.setAttribute("src","https://cdn-icons-png.flaticon.com/512/263/263142.png")
+    image.setAttribute("alt","Image of Shopping Card")
+    image.setAttribute("height", "75")
+    image.setAttribute("width", "75")
+    console.log(image)
+}
+
+function changeListGreen(){
+    const item = document.querySelectorAll(".shopping li")
+    for(let currentLi of item){
+        if (currentLi.innerHTML.includes("green")){
+            // currentLi.style.color = "green"
+            // currentLi.setAttribute("style","color:green")
+            currentLi.classList.add("greenItem")
+        }
+
+    }
+  
+}
+updateImage()
+changeListGreen()
